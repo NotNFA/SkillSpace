@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+<defs>
+ <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#282321"/><stop offset=".52" stop-color="#65402e"/><stop offset="1" stop-color="#d17b3d"/></linearGradient>
+ <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#57382c"/><stop offset="1" stop-color="#171b1b"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#ffbd70" stop-opacity=".75"/><stop offset="1" stop-color="#ff9a4a" stop-opacity="0"/></radialGradient>
+ <linearGradient id="shade" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17191b" stop-opacity=".34"/><stop offset=".55" stop-color="#17191b" stop-opacity=".12"/><stop offset="1" stop-color="#17191b" stop-opacity=".72"/></linearGradient>
+</defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<circle cx="1190" cy="390" r="280" fill="url(#glow)"/>
+<circle cx="1190" cy="390" r="62" fill="#f4bd7c" opacity=".72"/>
+<path d="M0 520 L180 360 310 470 505 300 690 490 870 340 1040 500 1240 315 1450 475 1600 360 V900 H0Z" fill="#392d29" opacity=".88"/>
+<path d="M0 585 L190 455 340 560 560 395 760 585 980 430 1160 590 1390 420 1600 555 V900 H0Z" fill="#252625"/>
+<path d="M0 620 Q260 560 500 630 T1000 620 T1600 615 V900 H0Z" fill="url(#water)"/>
+<path d="M900 625 Q1180 590 1600 640" fill="none" stroke="#e89a58" stroke-width="9" opacity=".28"/>
+<path d="M980 675 Q1260 650 1600 690 M1060 725 Q1300 710 1600 740 M1150 790 Q1370 780 1600 805" fill="none" stroke="#f0b273" stroke-width="4" opacity=".16"/>
+<g fill="#171b1b">
+ <path d="M0 540 Q55 470 110 540 Q80 515 125 495 Q92 520 155 550 L155 900 H0Z"/>
+ <path d="M1450 570 Q1490 460 1540 550 Q1510 500 1575 465 Q1535 520 1600 570 V900 H1450Z"/>
+ <path d="M260 640 Q300 540 350 635 Q320 590 385 565 Q350 615 410 650 V900 H260Z"/>
+ <path d="M1320 660 Q1360 540 1410 650 Q1380 600 1440 570 Q1410 625 1470 670 V900 H1320Z"/>
+</g>
+<g stroke="#171b1b" stroke-width="18" stroke-linecap="round" fill="none" opacity=".9">
+ <path d="M95 900 Q115 720 75 560 M95 690 Q30 625 22 570 M95 730 Q160 660 185 600"/>
+ <path d="M1510 900 Q1485 700 1535 555 M1505 720 Q1430 665 1410 605 M1510 760 Q1580 690 1595 635"/>
+</g>
+<rect width="1600" height="900" fill="url(#shade)"/>
+</svg>
