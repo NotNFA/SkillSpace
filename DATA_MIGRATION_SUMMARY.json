@@ -1,0 +1,30 @@
+{
+  "preserved_counts": {
+    "users": 2,
+    "creator_profiles": 1,
+    "client_profiles": 1,
+    "hiring_requests": 0,
+    "community_posts": 0,
+    "community_messages": 0,
+    "meetings": 0,
+    "assurance_projects": 1,
+    "project_requirements": 9,
+    "project_milestones": 2,
+    "project_scope_checks": 0,
+    "project_submissions": 1,
+    "blueprint_revisions": 2,
+    "project_reviews": 0,
+    "project_feedback": 0,
+    "assurance_notifications": 6,
+    "global_chat_messages": 0,
+    "dm_invites": 0,
+    "dm_conversations": 0,
+    "dm_messages": 0,
+    "testimonials": 0,
+    "notification_reads": 0
+  },
+  "foreign_key_check": "passed",
+  "submission_files_verified": true,
+  "dummy_accounts_removed": 20,
+  "remaining_user_accounts": 2
+}

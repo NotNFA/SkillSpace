@@ -1,0 +1,28 @@
+{
+  "name": "skillspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SkillSpace creative talent marketplace",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js",
+    "check:pg-routes": "node scripts/check-postgres-routes.js",
+    "db:check": "node scripts/check-postgres.js",
+    "cloudinary:check": "node scripts/test-cloudinary.js",
+    "cloudinary:migrate-local": "node scripts/migrate-local-submissions-to-cloudinary.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "pg": "^8.23.1",
+    "socket.io": "^4.8.1",
+    "yauzl": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
