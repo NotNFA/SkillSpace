@@ -516,7 +516,35 @@ body.admin-mode #adminApp{display:flex!important}
  .sparkOne{left:3%;top:16%}.sparkTwo{right:3%;top:22%}.sparkThree{left:5%;bottom:14%}
 }
 @media(max-width:380px){.arcadeTiles{grid-template-columns:1fr;max-width:220px}.arcadeTile{min-height:82px}.arcadeSlogan{font-size:14px}}
-\n</style>
+\n
+/* Account-scoped Clear History controls */
+.clearHistoryBtn{font-size:12px!important;padding:8px 12px!important;min-height:34px;border:1px solid var(--line)!important;background:rgba(255,255,255,.055)!important;color:var(--text)!important;border-radius:10px!important;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.12)}
+.clearHistoryBtn:hover{border-color:var(--accent)!important;color:var(--accent)!important;background:rgba(255,255,255,.09)!important}
+.clearHistoryBtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+
+/* SkillSpace heading font: Block Blueprint (headings only; theme colours remain inherited). */
+@font-face{
+  font-family:'Block Blueprint';
+  src:url('fonts/Blockblueprint-LV7z5.ttf') format('truetype');
+  font-style:normal;
+  font-weight:100 900;
+  font-display:swap;
+}
+:where(h1,h2,h3,h4,h5,h6){font-family:'Block Blueprint',Inter,ui-sans-serif,system-ui,sans-serif !important;}
+
+/* Hover-only pixel dragon for the active burger-menu link. */
+.sideLinks a{position:relative !important;isolation:isolate;overflow:visible !important;padding-right:58px !important;}
+.sideLinks a:hover{padding-right:58px !important;}
+.sideLinks a::before{content:'' !important;position:absolute !important;left:14px !important;right:47px !important;top:50% !important;height:8px !important;margin-top:-4px !important;z-index:2 !important;pointer-events:none !important;opacity:0 !important;transform:scaleX(.15);transform-origin:right center;background:linear-gradient(90deg,rgba(255,79,24,0),rgba(255,104,25,.85) 28%,#ffd16a 72%,#fff0b0) !important;filter:drop-shadow(0 0 3px rgba(255,105,25,.9));}
+.sideLinks a:hover::before{opacity:1 !important;animation:ssDragonFire .42s steps(4,end) infinite alternate;}
+.sideLinks a::after{content:'' !important;position:absolute !important;right:10px !important;top:50% !important;width:40px !important;height:32px !important;margin-top:-16px !important;background:url('pixel-dragon.svg') center/contain no-repeat !important;image-rendering:pixelated !important;opacity:0 !important;pointer-events:none !important;filter:drop-shadow(0 2px 0 rgba(0,0,0,.35));}
+.sideLinks a:hover::after{opacity:1 !important;animation:ssDragonWalk .22s steps(2,end) infinite alternate;}
+@keyframes ssDragonWalk{from{transform:translateY(-2px) scaleX(1)}to{transform:translateY(1px) scaleX(1)}}
+@keyframes ssDragonFire{from{transform:scaleX(.45);filter:drop-shadow(0 0 2px rgba(255,105,25,.7))}to{transform:scaleX(1);filter:drop-shadow(0 0 6px rgba(255,105,25,1))}}
+@media(prefers-reduced-motion:reduce){.sideLinks a:hover::before,.sideLinks a:hover::after{animation:none !important}.sideLinks a:hover::before{transform:scaleX(1) !important}}
+
+</style>
 
 <style id="SkillSpace-hero-only-refresh">
 /* Hero-only visual refinement. Existing page sections, navigation and app logic remain unchanged. */
@@ -675,6 +703,29 @@ h1,h2,h3,h4,h5,h6,
   background-image:linear-gradient(105deg,#f0b184 0%,#e58a42 100%) !important;
 }
 
+
+
+/* SkillSpace heading font: Block Blueprint (headings only; theme colours remain inherited). */
+@font-face{
+  font-family:'Block Blueprint';
+  src:url('fonts/Blockblueprint-LV7z5.ttf') format('truetype');
+  font-style:normal;
+  font-weight:100 900;
+  font-display:swap;
+}
+:where(h1,h2,h3,h4,h5,h6){font-family:'Block Blueprint',Inter,ui-sans-serif,system-ui,sans-serif !important;}
+
+/* Hover-only pixel dragon for the active burger-menu link. */
+.sideLinks a{position:relative !important;isolation:isolate;overflow:visible !important;padding-right:58px !important;}
+.sideLinks a:hover{padding-right:58px !important;}
+.sideLinks a::before{content:'' !important;position:absolute !important;left:14px !important;right:47px !important;top:50% !important;height:8px !important;margin-top:-4px !important;z-index:2 !important;pointer-events:none !important;opacity:0 !important;transform:scaleX(.15);transform-origin:right center;background:linear-gradient(90deg,rgba(255,79,24,0),rgba(255,104,25,.85) 28%,#ffd16a 72%,#fff0b0) !important;filter:drop-shadow(0 0 3px rgba(255,105,25,.9));}
+.sideLinks a:hover::before{opacity:1 !important;animation:ssDragonFire .42s steps(4,end) infinite alternate;}
+.sideLinks a::after{content:'' !important;position:absolute !important;right:10px !important;top:50% !important;width:40px !important;height:32px !important;margin-top:-16px !important;background:url('pixel-dragon.svg') center/contain no-repeat !important;image-rendering:pixelated !important;opacity:0 !important;pointer-events:none !important;filter:drop-shadow(0 2px 0 rgba(0,0,0,.35));}
+.sideLinks a:hover::after{opacity:1 !important;animation:ssDragonWalk .22s steps(2,end) infinite alternate;}
+@keyframes ssDragonWalk{from{transform:translateY(-2px) scaleX(1)}to{transform:translateY(1px) scaleX(1)}}
+@keyframes ssDragonFire{from{transform:scaleX(.45);filter:drop-shadow(0 0 2px rgba(255,105,25,.7))}to{transform:scaleX(1);filter:drop-shadow(0 0 6px rgba(255,105,25,1))}}
+@media(prefers-reduced-motion:reduce){.sideLinks a:hover::before,.sideLinks a:hover::after{animation:none !important}.sideLinks a:hover::before{transform:scaleX(1) !important}}
+
 </style>
 <style id="skillspace-button-contrast-fix">
 /* Keep all public-app button labels readable against the established orange/charcoal theme. */
@@ -682,6 +733,29 @@ h1,h2,h3,h4,h5,h6,
 #homeView .btn.ghost,#dashboardView .btn.ghost,#meetingsView .btn.ghost,#communityView .btn.ghost,#assuranceView .btn.ghost,#chatView .btn.ghost,#testimonialsView .btn.ghost,.modal .btn.ghost,.navactions .btn.ghost,.view,.filter,.leaderboardTab{color:#f4eee4 !important;-webkit-text-fill-color:#f4eee4 !important;}
 #homeView button:not(.btn):not(.adminBtn),#dashboardView button:not(.btn):not(.adminBtn),#meetingsView button:not(.btn):not(.adminBtn),#communityView button:not(.btn):not(.adminBtn),#assuranceView button:not(.btn):not(.adminBtn),.modal button:not(.btn):not(.close){color:inherit;}
 #adminApp .adminBtn,#adminApp .adminLogout,#adminApp .adminNav button{ -webkit-text-fill-color:currentColor !important;}
+
+
+/* SkillSpace heading font: Block Blueprint (headings only; theme colours remain inherited). */
+@font-face{
+  font-family:'Block Blueprint';
+  src:url('fonts/Blockblueprint-LV7z5.ttf') format('truetype');
+  font-style:normal;
+  font-weight:100 900;
+  font-display:swap;
+}
+:where(h1,h2,h3,h4,h5,h6){font-family:'Block Blueprint',Inter,ui-sans-serif,system-ui,sans-serif !important;}
+
+/* Hover-only pixel dragon for the active burger-menu link. */
+.sideLinks a{position:relative !important;isolation:isolate;overflow:visible !important;padding-right:58px !important;}
+.sideLinks a:hover{padding-right:58px !important;}
+.sideLinks a::before{content:'' !important;position:absolute !important;left:14px !important;right:47px !important;top:50% !important;height:8px !important;margin-top:-4px !important;z-index:2 !important;pointer-events:none !important;opacity:0 !important;transform:scaleX(.15);transform-origin:right center;background:linear-gradient(90deg,rgba(255,79,24,0),rgba(255,104,25,.85) 28%,#ffd16a 72%,#fff0b0) !important;filter:drop-shadow(0 0 3px rgba(255,105,25,.9));}
+.sideLinks a:hover::before{opacity:1 !important;animation:ssDragonFire .42s steps(4,end) infinite alternate;}
+.sideLinks a::after{content:'' !important;position:absolute !important;right:10px !important;top:50% !important;width:40px !important;height:32px !important;margin-top:-16px !important;background:url('pixel-dragon.svg') center/contain no-repeat !important;image-rendering:pixelated !important;opacity:0 !important;pointer-events:none !important;filter:drop-shadow(0 2px 0 rgba(0,0,0,.35));}
+.sideLinks a:hover::after{opacity:1 !important;animation:ssDragonWalk .22s steps(2,end) infinite alternate;}
+@keyframes ssDragonWalk{from{transform:translateY(-2px) scaleX(1)}to{transform:translateY(1px) scaleX(1)}}
+@keyframes ssDragonFire{from{transform:scaleX(.45);filter:drop-shadow(0 0 2px rgba(255,105,25,.7))}to{transform:scaleX(1);filter:drop-shadow(0 0 6px rgba(255,105,25,1))}}
+@media(prefers-reduced-motion:reduce){.sideLinks a:hover::before,.sideLinks a:hover::after{animation:none !important}.sideLinks a:hover::before{transform:scaleX(1) !important}}
+
 </style>
 
 <style id="skillspace-reference-pixel-theme">
@@ -819,6 +893,29 @@ body.menuOpen{overflow:hidden !important}
   .sideMenu{width:min(390px,90vw) !important;padding:24px 18px !important}
 }
 
+
+
+/* SkillSpace heading font: Block Blueprint (headings only; theme colours remain inherited). */
+@font-face{
+  font-family:'Block Blueprint';
+  src:url('fonts/Blockblueprint-LV7z5.ttf') format('truetype');
+  font-style:normal;
+  font-weight:100 900;
+  font-display:swap;
+}
+:where(h1,h2,h3,h4,h5,h6){font-family:'Block Blueprint',Inter,ui-sans-serif,system-ui,sans-serif !important;}
+
+/* Hover-only pixel dragon for the active burger-menu link. */
+.sideLinks a{position:relative !important;isolation:isolate;overflow:visible !important;padding-right:58px !important;}
+.sideLinks a:hover{padding-right:58px !important;}
+.sideLinks a::before{content:'' !important;position:absolute !important;left:14px !important;right:47px !important;top:50% !important;height:8px !important;margin-top:-4px !important;z-index:2 !important;pointer-events:none !important;opacity:0 !important;transform:scaleX(.15);transform-origin:right center;background:linear-gradient(90deg,rgba(255,79,24,0),rgba(255,104,25,.85) 28%,#ffd16a 72%,#fff0b0) !important;filter:drop-shadow(0 0 3px rgba(255,105,25,.9));}
+.sideLinks a:hover::before{opacity:1 !important;animation:ssDragonFire .42s steps(4,end) infinite alternate;}
+.sideLinks a::after{content:'' !important;position:absolute !important;right:10px !important;top:50% !important;width:40px !important;height:32px !important;margin-top:-16px !important;background:url('pixel-dragon.svg') center/contain no-repeat !important;image-rendering:pixelated !important;opacity:0 !important;pointer-events:none !important;filter:drop-shadow(0 2px 0 rgba(0,0,0,.35));}
+.sideLinks a:hover::after{opacity:1 !important;animation:ssDragonWalk .22s steps(2,end) infinite alternate;}
+@keyframes ssDragonWalk{from{transform:translateY(-2px) scaleX(1)}to{transform:translateY(1px) scaleX(1)}}
+@keyframes ssDragonFire{from{transform:scaleX(.45);filter:drop-shadow(0 0 2px rgba(255,105,25,.7))}to{transform:scaleX(1);filter:drop-shadow(0 0 6px rgba(255,105,25,1))}}
+@media(prefers-reduced-motion:reduce){.sideLinks a:hover::before,.sideLinks a:hover::after{animation:none !important}.sideLinks a:hover::before{transform:scaleX(1) !important}}
+
 </style>
 
 </head>
@@ -926,7 +1023,7 @@ body.menuOpen{overflow:hidden !important}
 </section>
 \n<footer class="container"><span>© 2026 SkillSpace. Built for creators.</span><span>About · Privacy · Terms · Contact</span></footer>
 </div>
-<section id="assuranceView" class="viewpage"><div class="container"><div class="dashTop"><div><div class="eyebrow">🛡️ Smart Project Assurance</div><h1>My Projects</h1><p>Approved requirements, milestone progress and ZIP validation.</p></div><button class="btn ghost" onclick="goHome()">← Back to SkillSpace</button></div><div id="assuranceContent"></div></div></section><section id="dashboardView" class="viewpage"><div class="container"><div class="dashTop"><div><h1 id="dashTitle">Dashboard</h1><p id="dashSubtitle"></p></div><button class="btn ghost" onclick="goHome()">← Back to SkillSpace</button></div><div id="dashboardContent"></div></div></section><section id="meetingsView" class="viewpage"><div class="container"><div class="dashTop"><div><div class="eyebrow">📅 Your schedule</div><h1>My Meetings</h1><p>View meeting requests, responses and confirmed meeting details.</p></div><button class="btn ghost" onclick="goHome()">← Back to SkillSpace</button></div><div class="panel"><h3 id="meetingsPanelTitle">Meeting activity</h3><p id="meetingsStatus" style="color:var(--muted)">Your meeting activity will appear here.</p><div id="meetingsContent" class="notificationList"><div class="notifEmpty">No meetings to show yet.</div></div></div></div></section><section id="communityView" class="viewpage"><div class="container"><div class="dashTop"><div><div class="eyebrow">🌍 Open creative opportunities</div><h1 style="font-size:52px;letter-spacing:-3px;text-align:left;margin:16px 0 6px">Community</h1><p>Real projects from clients around the world. Find work that fits your skills, availability and goals — then reach out directly.</p></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button id="communityPostBtn" class="btn green" onclick="openCommunityPost()">+ Post a project</button><button class="btn ghost" onclick="goHome()">← Back to SkillSpace</button></div></div><div class="communityStats"><div class="communityStat"><b id="communityProjectCount">—</b><span>open projects</span></div><div class="communityStat"><b>12</b><span>talent categories</span></div><div class="communityStat"><b>Direct</b><span>creator → client conversations</span></div></div><div class="panel communityComposer"><div class="sectionHead" style="margin-bottom:8px"><div><h2 style="font-size:28px">Find your next project</h2></div><p>Browse, compare and choose opportunities that make sense for you.</p></div><div class="communityToolbar"><input id="communitySearch" class="communitySearch" placeholder="Search projects, skills or project type…" oninput="loadCommunity()"><select id="communitySort" class="communitySort" onchange="loadCommunity()"><option value="newest">Newest first</option><option value="responses">Most responses</option><option value="budget">Budget / details</option></select></div><div class="filters" id="communityTalentFilters"><button class="filter active" onclick="setCommunityFilter(this,'All')">All projects</button></div><div id="communityGrid" class="communityGrid"></div></div></div></section>
+<section id="assuranceView" class="viewpage"><div class="container"><div class="dashTop"><div><div class="eyebrow">🛡️ Smart Project Assurance</div><h1>My Projects</h1><p>Approved requirements, milestone progress and ZIP validation.</p></div><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><button class="btn clearHistoryBtn" onclick="clearPageHistory('projects')">Clear History</button><button class="btn ghost" onclick="goHome()">← Back to SkillSpace</button></div></div><div id="assuranceContent"></div></div></section><section id="dashboardView" class="viewpage"><div class="container"><div class="dashTop"><div><h1 id="dashTitle">Dashboard</h1><p id="dashSubtitle"></p></div><button class="btn ghost" onclick="goHome()">← Back to SkillSpace</button></div><div id="dashboardContent"></div></div></section><section id="meetingsView" class="viewpage"><div class="container"><div class="dashTop"><div><div class="eyebrow">📅 Your schedule</div><h1>My Meetings</h1><p>View meeting requests, responses and confirmed meeting details.</p></div><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><button class="btn clearHistoryBtn" onclick="clearPageHistory('meetings')">Clear History</button><button class="btn ghost" onclick="goHome()">← Back to SkillSpace</button></div></div><div class="panel"><h3 id="meetingsPanelTitle">Meeting activity</h3><p id="meetingsStatus" style="color:var(--muted)">Your meeting activity will appear here.</p><div id="meetingsContent" class="notificationList"><div class="notifEmpty">No meetings to show yet.</div></div></div></div></section><section id="communityView" class="viewpage"><div class="container"><div class="dashTop"><div><div class="eyebrow">🌍 Open creative opportunities</div><h1 style="font-size:52px;letter-spacing:-3px;text-align:left;margin:16px 0 6px">Community</h1><p>Real projects from clients around the world. Find work that fits your skills, availability and goals — then reach out directly.</p></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button id="communityPostBtn" class="btn green" onclick="openCommunityPost()">+ Post a project</button><button class="btn ghost" onclick="goHome()">← Back to SkillSpace</button></div></div><div class="communityStats"><div class="communityStat"><b id="communityProjectCount">—</b><span>open projects</span></div><div class="communityStat"><b>12</b><span>talent categories</span></div><div class="communityStat"><b>Direct</b><span>creator → client conversations</span></div></div><div class="panel communityComposer"><div class="sectionHead" style="margin-bottom:8px"><div><h2 style="font-size:28px">Find your next project</h2></div><p>Browse, compare and choose opportunities that make sense for you.</p></div><div class="communityToolbar"><input id="communitySearch" class="communitySearch" placeholder="Search projects, skills or project type…" oninput="loadCommunity()"><select id="communitySort" class="communitySort" onchange="loadCommunity()"><option value="newest">Newest first</option><option value="responses">Most responses</option><option value="budget">Budget / details</option></select></div><div class="filters" id="communityTalentFilters"><button class="filter active" onclick="setCommunityFilter(this,'All')">All projects</button></div><div id="communityGrid" class="communityGrid"></div></div></div></section>
 
 <section id="chatView" class="viewpage"><div class="container"><div class="dashTop"><div><div class="eyebrow">💬 SkillSpace conversations</div><h1>Chat Space</h1><p>Meet the community or continue a private conversation.</p></div><button class="btn ghost" onclick="goHome()">← Back</button></div><div class="chatTabs"><button id="globalChatTab" class="btn green" onclick="showChat('global')">Global Chat</button><button id="dmChatTab" class="btn ghost" onclick="showChat('dms')">DMs</button></div><div id="chatGlobalPanel" class="panel chatPanel"><div class="chatMessages" id="globalMessages"></div><form id="globalChatForm" class="chatComposer"><input id="globalChatInput" maxlength="1200" placeholder="Write a message to everyone…"><button class="btn green" type="submit">Send</button></form></div><div id="chatDMPanel" class="panel chatPanel" style="display:none"><div class="dmLayout"><aside class="dmSidebar"><div class="dmInviteBox"><label>Invite someone to a private chat</label><select id="dmUserSelect"><option value="">Choose a user</option></select><button class="btn green small" onclick="sendDMInvite()">Send invite</button></div><div id="dmInvites"></div><h3>Your conversations</h3><div id="dmConversationList"></div></aside><div class="dmConversation"><div id="dmConversationTitle" class="dmConversationTitle">Select a conversation</div><div class="chatMessages" id="dmMessages"><div class="empty">Choose an accepted DM to start chatting.</div></div><form id="dmChatForm" class="chatComposer"><input id="dmChatInput" maxlength="1200" placeholder="Write a private message…" disabled><button class="btn green" type="submit" disabled id="dmSendBtn">Send</button></form></div></div></div></div></section>
 <section id="testimonialsView" class="viewpage"><div class="container"><div class="dashTop"><div><div class="eyebrow">⭐ Community feedback</div><h1>Testimonials</h1><p>Honest experiences shared by SkillSpace members.</p></div><div><button class="btn green" onclick="openTestimonialForm()">Submit Testimonial</button><button class="btn ghost" onclick="goHome()">← Back</button></div></div><div id="allTestimonials" class="testimonialGrid"></div></div></section>
@@ -935,10 +1032,40 @@ body.menuOpen{overflow:hidden !important}
 <div class="modal" id="meetingScheduleModal"><div class="modalbox"><button class="close" onclick="closeModal('meetingScheduleModal')">×</button><div id="meetingScheduleContent"></div></div></div>
 <div class="modal" id="profileModal"><div class="modalbox"><button class="close" onclick="closeModal('profileModal')">×</button><div id="profileContent"></div></div></div>
 <div class="modal" id="hirerModal"><div class="modalbox"><button class="close" onclick="closeModal('hirerModal')">×</button><div id="hirerContent"></div></div></div>
-<div class="modal" id="notificationsModal"><div class="modalbox"><button class="close" onclick="closeModal('notificationsModal')">×</button><h2>Notifications</h2><p id="notificationsIntro" style="color:var(--muted)">Your latest hiring activity.</p><div id="notificationsContent" class="notificationList"></div></div></div>
+<div class="modal" id="notificationsModal"><div class="modalbox"><button class="close" onclick="closeModal('notificationsModal')">×</button><div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding-right:34px"><h2 style="margin:0">Notifications</h2><button class="btn clearHistoryBtn" onclick="clearPageHistory('notifications')">Clear History</button></div><p id="notificationsIntro" style="color:var(--muted)">Your latest hiring activity.</p><div id="notificationsContent" class="notificationList"></div></div></div>
 <div class="modal" id="communityPostModal"><div class="modalbox"><button class="close" onclick="closeModal('communityPostModal')">×</button><h2>Post a project</h2><p>Tell the SkillSpace community what kind of creative you are hiring.</p><form id="communityPostForm"><div class="modalFields"><div class="field full"><label>Project title</label><input id="communityTitle" maxlength="120" placeholder="Looking for a graphic designer for a brand launch" required></div><div class="field"><label>Category</label><select id="communityCategory"><option>Graphic Designer</option><option>Video Editor</option><option>UI/UX Designer</option><option>VFX Artist</option><option>Web Developers</option><option>Digital Marketers</option><option>AI Specialists</option><option>App Developers</option><option>3D Artists</option><option>Content Writers</option><option>Data Analysts</option><option>Presentation Designers</option></select></div><div class="field"><label>Project type</label><input id="communityType" placeholder="Logo, app, reel, campaign…"></div><div class="field full"><label>Short project brief</label><textarea id="communityDescription" maxlength="1000" placeholder="What do you need, what is the goal, and what should the creator deliver?" required></textarea></div><div class="field full"><label>Budget (optional)</label><input id="communityBudget" placeholder="₹20,000–₹30,000 or Negotiable"></div></div><button type="submit" class="btn green" style="width:100%;margin-top:15px">Publish project</button></form></div></div>
 <div class="modal" id="communityMessageModal"><div class="modalbox"><button class="close" onclick="closeModal('communityMessageModal')">×</button><div id="communityMessageContent"></div></div></div>
 <div class="toast" id="toast"></div><div id="notificationToast" role="status" aria-live="polite">1 new notification</div>
+<style id="recent-activity-and-hirer-button-fixes">
+/* Keep the View hirer profile action orange regardless of its surrounding button styles. */
+.btn.viewHirerBtn,.btn.viewHirerBtn:visited{background:var(--ss-orange,#e58a42)!important;background-color:var(--ss-orange,#e58a42)!important;border-color:var(--ss-orange,#e58a42)!important;color:#21150e!important;-webkit-text-fill-color:#21150e!important;box-shadow:3px 3px 0 rgba(0,0,0,.28)!important}
+.btn.viewHirerBtn:hover{background:#f09a55!important;background-color:#f09a55!important;border-color:#f09a55!important;color:#21150e!important;-webkit-text-fill-color:#21150e!important}
+.recentActivity .btn{padding:6px 9px!important;font-size:10px!important;line-height:1.2!important;min-height:0!important}
+.recentActivity .note .actions{margin-top:8px;gap:6px}
+
+
+/* SkillSpace heading font: Block Blueprint (headings only; theme colours remain inherited). */
+@font-face{
+  font-family:'Block Blueprint';
+  src:url('fonts/Blockblueprint-LV7z5.ttf') format('truetype');
+  font-style:normal;
+  font-weight:100 900;
+  font-display:swap;
+}
+:where(h1,h2,h3,h4,h5,h6){font-family:'Block Blueprint',Inter,ui-sans-serif,system-ui,sans-serif !important;}
+
+/* Hover-only pixel dragon for the active burger-menu link. */
+.sideLinks a{position:relative !important;isolation:isolate;overflow:visible !important;padding-right:58px !important;}
+.sideLinks a:hover{padding-right:58px !important;}
+.sideLinks a::before{content:'' !important;position:absolute !important;left:14px !important;right:47px !important;top:50% !important;height:8px !important;margin-top:-4px !important;z-index:2 !important;pointer-events:none !important;opacity:0 !important;transform:scaleX(.15);transform-origin:right center;background:linear-gradient(90deg,rgba(255,79,24,0),rgba(255,104,25,.85) 28%,#ffd16a 72%,#fff0b0) !important;filter:drop-shadow(0 0 3px rgba(255,105,25,.9));}
+.sideLinks a:hover::before{opacity:1 !important;animation:ssDragonFire .42s steps(4,end) infinite alternate;}
+.sideLinks a::after{content:'' !important;position:absolute !important;right:10px !important;top:50% !important;width:40px !important;height:32px !important;margin-top:-16px !important;background:url('pixel-dragon.svg') center/contain no-repeat !important;image-rendering:pixelated !important;opacity:0 !important;pointer-events:none !important;filter:drop-shadow(0 2px 0 rgba(0,0,0,.35));}
+.sideLinks a:hover::after{opacity:1 !important;animation:ssDragonWalk .22s steps(2,end) infinite alternate;}
+@keyframes ssDragonWalk{from{transform:translateY(-2px) scaleX(1)}to{transform:translateY(1px) scaleX(1)}}
+@keyframes ssDragonFire{from{transform:scaleX(.45);filter:drop-shadow(0 0 2px rgba(255,105,25,.7))}to{transform:scaleX(1);filter:drop-shadow(0 0 6px rgba(255,105,25,1))}}
+@media(prefers-reduced-motion:reduce){.sideLinks a:hover::before,.sideLinks a:hover::after{animation:none !important}.sideLinks a:hover::before{transform:scaleX(1) !important}}
+
+</style>
 <script src="/socket.io/socket.io.js" defer></script>
 <script>
 
@@ -983,7 +1110,20 @@ async function refreshNotificationBadge(){try{const d=await api('/api/notificati
 let notificationToastTimer=null;function showIncomingNotification(){const el=$('notificationToast');if(!el)return;el.textContent='1 new notification';el.classList.remove('leaving');el.classList.add('show');clearTimeout(notificationToastTimer);notificationToastTimer=setTimeout(()=>{el.classList.add('leaving');setTimeout(()=>el.classList.remove('show','leaving'),260)},1900)}
 function notificationContactId(r){const id=Number(r.client_user_id||r.creator_user_id||(r.type==='meeting'?(Number(r.requester_id)===Number(user()?.id)?r.receiver_id:r.requester_id):0)||(r.type==='dm_message'?r.sender_id:0));return id&&id!==Number(user()?.id)?id:0}
 async function connectFromNotification(otherUserId){try{const d=await api('/api/chat/connect/'+Number(otherUserId),{method:'POST',body:JSON.stringify({})});closeModal('notificationsModal');await showChat('dms');await loadDMWorkspace();const list=await api('/api/chat/dms');const conversation=(list.conversations||[]).find(x=>Number(x.other_user_id)===Number(otherUserId));if(conversation){const name=conversation.other_name||'Connection';await openDMConversation(conversation.id,name)}toast(d.message||'DM is ready.')}catch(e){toast(e.message,true)}}
-async function openNotifications(){if(!user()){openAuth('login');return}try{const d=await api('/api/notifications');const rows=d.notifications||[];$('notificationsIntro').textContent='Your latest activity and connections.';$('notificationsContent').innerHTML=rows.length?rows.map(r=>{const contactId=notificationContactId(r);const profileAction=user().role==='creator'&&r.client_user_id?`<button class=\"btn small ghost\" onclick=\"closeModal('notificationsModal');viewHirer(${r.client_user_id})\">View hirer profile</button>`:'';const connectAction=contactId?`<button class=\"btn small green\" onclick=\"connectFromNotification(${contactId})\">Connect</button>`:'';return `<div class=\"notificationItem\"><strong>${esc(r.message)}</strong><small>${new Date(String(r.created_at).includes('Z')?r.created_at:r.created_at+'Z').toLocaleString()}</small>${profileAction||connectAction?`<div class=\"actions\">${profileAction}${connectAction}</div>`:''}${user().role==='client'&&r.type==='community_message'&&r.post_id?`<div class=\"actions\"><button class=\"btn small ghost\" onclick=\"closeModal('notificationsModal');showCommunity();viewCommunityResponses(${r.post_id})\">View response</button></div>`:''}${String(r.type||'').startsWith('assurance_')?`<div class=\"actions\"><button class=\"btn small green\" onclick=\"closeModal('notificationsModal');showAssuranceWorkspace()\">View project</button></div>`:''}</div>`}).join(''):'<div class=\"notifEmpty\">No notifications yet.</div>';await api('/api/notifications/read',{method:'POST',body:JSON.stringify({})});await refreshNotificationBadge();openModal('notificationsModal')}catch(e){toast(e.message,true)}}
+async function clearPageHistory(page){
+ const labels={meetings:'meetings',notifications:'notifications',projects:'projects'};
+ if(!labels[page])return;
+ if(!confirm(`Clear all previous ${labels[page]} records from this account? This will not delete or affect records visible to other accounts.`))return;
+ try{
+  const d=await api(`/api/account/history/${page}/clear`,{method:'POST',body:JSON.stringify({})});
+  toast(d.message||'History cleared.');
+  if(page==='meetings')await showMyMeetings();
+  else if(page==='projects')await showAssuranceWorkspace();
+  else if($('notificationsModal')?.classList.contains('open')){closeModal('notificationsModal');await openNotifications()}
+  await refreshNotificationBadge();
+ }catch(e){toast(e.message||'Could not clear history.',true)}
+}
+async function openNotifications(){if(!user()){openAuth('login');return}try{const d=await api('/api/notifications');const rows=d.notifications||[];$('notificationsIntro').textContent='Your latest activity and connections.';$('notificationsContent').innerHTML=rows.length?rows.map(r=>{const contactId=notificationContactId(r);const profileAction=user().role==='creator'&&r.client_user_id?`<button class=\"btn small viewHirerBtn\" onclick=\"closeModal('notificationsModal');viewHirer(${r.client_user_id})\">View hirer profile</button>`:'';const connectAction=contactId?`<button class=\"btn small green\" onclick=\"connectFromNotification(${contactId})\">Connect</button>`:'';return `<div class=\"notificationItem\"><strong>${esc(r.message)}</strong><small>${activityDate(r.created_at).toLocaleString()}</small>${profileAction||connectAction?`<div class=\"actions\">${profileAction}${connectAction}</div>`:''}${user().role==='client'&&r.type==='community_message'&&r.post_id?`<div class=\"actions\"><button class=\"btn small ghost\" onclick=\"closeModal('notificationsModal');showCommunity();viewCommunityResponses(${r.post_id})\">View response</button></div>`:''}${String(r.type||'').startsWith('assurance_')?`<div class=\"actions\"><button class=\"btn small green\" onclick=\"closeModal('notificationsModal');showAssuranceWorkspace()\">View project</button></div>`:''}</div>`}).join(''):'<div class=\"notifEmpty\">No notifications yet.</div>';await api('/api/notifications/read',{method:'POST',body:JSON.stringify({})});await refreshNotificationBadge();openModal('notificationsModal')}catch(e){toast(e.message,true)}}
 function logout(){stopRealtime();localStorage.removeItem('SkillSpace_token');localStorage.removeItem('SkillSpace_user');updateNav();goHome();toast('You have been logged out.')}
 function initials(n){return String(n||'?').split(' ').map(x=>x[0]).slice(0,2).join('').toUpperCase()}
 async function loadCreators(){const rawQ=($('homeSearch').value||'').trim();const rawCat=$('homeCategory').value||'All';const q=encodeURIComponent(rawQ);const cat=encodeURIComponent(rawCat);try{const d=await api(`/api/creators?category=${cat}&search=${q}`);if(!rawQ&&rawCat==='All')creatorDirectoryCache=d.creators||[];let list=d.creators||[];if(activeFilter!=='All')list=list.filter(c=>c.category===activeFilter);$('creatorGrid').innerHTML=list.length?list.map(c=>creatorCard(c)).join(''):`<div class="empty" style="grid-column:1/-1">No creators found. Try another category or search.</div>`}catch(e){$('creatorGrid').innerHTML='<div class="empty" style="grid-column:1/-1">Could not load creators. Make sure SkillSpace is running.</div>'}}
@@ -1234,21 +1374,23 @@ async function setCreatorVerification(id,verified){try{await api(`/api/admin/cre
 async function showDashboard(){const u=user();if(!u)return openAuth('login');if(u.isAdmin)return showAdminDashboard();$('homeView').style.display='none';$('communityView').classList.remove('show');$('meetingsView').classList.remove('show');$('assuranceView').classList.remove('show');$('chatView')?.classList.remove('show');$('testimonialsView')?.classList.remove('show');$('dashboardView').classList.add('show');$('dashTitle').textContent=u.role==='creator'?'Creator dashboard':'Client dashboard';$('dashSubtitle').textContent=u.role==='creator'?'Build the profile clients will see.':'Find creators, review their profiles and manage your hiring requests.';u.role==='creator'?await renderCreatorDash():await renderClientDash();window.scrollTo({top:0,behavior:'smooth'})}
 async function renderCreatorDash(){try{const [p,n,projects,meetings]=await Promise.all([api('/api/creator-profile'),api('/api/notifications'),api('/api/assurance/projects'),api('/api/meetings')]);const c=p.creator||{};const s=c.socials||{};const complete=Boolean(Number(c.profile_saved));const active=(projects.projects||[]).filter(x=>!['completed','cancelled'].includes(String(x.status).toLowerCase())).length;const pending=(projects.projects||[]).filter(x=>x.status==='awaiting_creator_agreement').length;const upcoming=(meetings.meetings||[]).filter(x=>['pending','confirmed'].includes(x.status)).length;
 const details=`<div class="detailGrid"><div class="detail"><b>Verification</b>${Number(c.verified)?'<span class="verified">✓ Verified Creator</span>':'Not verified yet'}</div><div class="detail"><b>Talent category</b>${esc(c.category||'Not selected')}</div><div class="detail"><b>Experience</b>${Number(c.experience_years||0)} years</div><div class="detail"><b>Qualifications</b>${esc(c.qualifications||'Not added')}</div><div class="detail"><b>Skills</b>${esc(c.skills||'Not added')}</div><div class="detail"><b>Work type</b>${esc(c.work_mode||'Not specified')}</div><div class="detail"><b>Expected salary</b>${esc(c.expected_salary||'Negotiable')}</div><div class="detail"><b>Hourly rate</b>${c.hourly_rate?'₹'+Number(c.hourly_rate).toLocaleString()+'/hr':'Not specified'}</div><div class="detail"><b>Portfolio</b>${c.portfolio_url?`<a href="${esc(c.portfolio_url)}" target="_blank" rel="noopener">Open portfolio</a>`:'Not added'}</div><div class="detail" style="grid-column:1/-1"><b>About</b>${esc(c.bio||'No bio added yet.')}</div><div class="detail" style="grid-column:1/-1"><b>Sample works</b>${(c.sample_works||'').split(/\r?\n/).filter(Boolean).map(x=>`<a href="${esc(x)}" target="_blank" rel="noopener">${esc(x)}</a>`).join('<br>')||'No sample works added'}</div></div><div class="saveRow"><button class="btn ghost" onclick="editCreatorProfile()">Edit Profile</button></div>${deleteAccountPanel()}`;
-$('dashboardContent').innerHTML=`<div class="dashStats"><div class="dashStat"><span>Active projects</span><b>${active}</b></div><div class="dashStat"><span>Blueprints awaiting you</span><b>${pending}</b></div><div class="dashStat"><span>Meetings & requests</span><b>${upcoming}</b></div><div class="dashStat"><span>Reputation</span><b>${Number(c.rating||0).toFixed(1)} ★</b></div></div><div class="dashGrid"><div class="panel"><div class="panelHead"><div><h3>My Creator Profile</h3><p>${complete?'Your saved profile is shown below.':'Complete your profile to help clients discover you.'}</p></div></div><div id="creatorProfileArea">${complete?details:creatorProfileEditor(c,s)}</div></div><div class="panel"><h3>Creator workspace</h3><p>Stay on top of your opportunities and project activity.</p><div class="quickActions"><button class="btn green" onclick="showAssuranceWorkspace()">Open My Projects</button><button class="btn ghost" onclick="showMyMeetings()">View Meetings</button><button class="btn ghost" onclick="showChat('dms')">Open DMs</button></div><h3 style="margin-top:24px">Recent activity</h3><div id="creatorNotes">${creatorNotifications(n.notifications||[])}</div></div></div>`;
+$('dashboardContent').innerHTML=`<div class="dashStats"><div class="dashStat"><span>Active projects</span><b>${active}</b></div><div class="dashStat"><span>Blueprints awaiting you</span><b>${pending}</b></div><div class="dashStat"><span>Meetings & requests</span><b>${upcoming}</b></div><div class="dashStat"><span>Reputation</span><b>${Number(c.rating||0).toFixed(1)} ★</b></div></div><div class="dashGrid"><div class="panel"><div class="panelHead"><div><h3>My Creator Profile</h3><p>${complete?'Your saved profile is shown below.':'Complete your profile to help clients discover you.'}</p></div></div><div id="creatorProfileArea">${complete?details:creatorProfileEditor(c,s)}</div></div><div class="panel"><h3>Creator workspace</h3><p>Stay on top of your opportunities and project activity.</p><div class="quickActions"><button class="btn green" onclick="showAssuranceWorkspace()">Open My Projects</button><button class="btn ghost" onclick="showMyMeetings()">View Meetings</button><button class="btn ghost" onclick="showChat('dms')">Open DMs</button></div><h3 style="margin-top:24px">Recent activity</h3><div id="creatorNotes" class="recentActivity">${creatorNotifications(n.notifications||[])}</div></div></div>`;
 if(!complete){$('creatorForm').onsubmit=saveCreatorProfile;}}
 catch(e){toast(e.message,true)}}
 function creatorProfileEditor(c={},s={}){return `<form id="creatorForm"><div class="formgrid"><div class="field"><label>Creative field</label><select id="pCategory">${TALENT_CATEGORIES.map(x=>`<option ${c.category===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="field"><label>Experience (years)</label><input id="pExp" type="number" min="0" value="${Number(c.experience_years||0)}"></div><div class="field full"><label>Qualifications</label><textarea id="pQual">${esc(c.qualifications||'')}</textarea></div><div class="field full"><label>Skills</label><input id="pSkills" value="${esc(c.skills||'')}" placeholder="Your key skills"></div><div class="field full"><label>About / Bio</label><textarea id="pBio">${esc(c.bio||'')}</textarea></div><div class="field"><label>Work type</label><select id="pMode">${['Part-time','Full-time','Freelance','Contract'].map(x=>`<option ${c.work_mode===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="field"><label>Expected salary</label><input id="pSalary" value="${esc(c.expected_salary||'')}"></div><div class="field"><label>Hourly rate</label><input id="pRate" type="number" min="0" value="${Number(c.hourly_rate||0)}"></div><div class="field"><label>Main portfolio URL</label><input id="pPortfolio" value="${esc(c.portfolio_url||'')}"></div><div class="field"><label>Instagram</label><input id="pInstagram" value="${esc(s.instagram||'')}"></div><div class="field"><label>LinkedIn</label><input id="pLinkedin" value="${esc(s.linkedin||'')}"></div><div class="field"><label>Behance</label><input id="pBehance" value="${esc(s.behance||'')}"></div><div class="field"><label>Website</label><input id="pWebsite" value="${esc(s.website||'')}"></div><div class="field full"><label>Sample works — one URL per line</label><textarea id="pWorks">${esc((c.sample_works||'').trim())}</textarea></div></div><div class="saveRow"><button class="btn green" type="submit">Save Profile</button></div></form>${deleteAccountPanel()}`}
 function editCreatorProfile(){api('/api/creator-profile').then(p=>{$('creatorProfileArea').innerHTML=creatorProfileEditor(p.creator||{},p.creator?.socials||{});$('creatorForm').onsubmit=saveCreatorProfile}).catch(e=>toast(e.message,true))}
-function creatorNotifications(rows){if(!rows.length)return '<div class="empty">No hiring requests yet.</div>';return rows.map(r=>`<div class="note"><strong>${esc(r.message)}</strong><small>${new Date(r.created_at+'Z').toLocaleString()}</small><div class="actions"><button class="btn small green" onclick="viewHirer(${r.client_user_id})">View hirer profile</button></div></div>`).join('')}
+function activityDate(value){const raw=String(value||'');return new Date(/(?:Z|[+-]\d{2}:?\d{2})$/i.test(raw)?raw:raw+'Z')}
+function latestThreeActivity(rows){return [...(rows||[])].sort((a,b)=>{const at=activityDate(a.created_at).getTime();const bt=activityDate(b.created_at).getTime();return (Number.isFinite(bt)?bt:0)-(Number.isFinite(at)?at:0)}).slice(0,3)}
+function creatorNotifications(rows){const latest=latestThreeActivity(rows);if(!latest.length)return '<div class="empty">No hiring requests yet.</div>';return latest.map(r=>`<div class="note"><strong>${esc(r.message)}</strong><small>${activityDate(r.created_at).toLocaleString()}</small>${r.client_user_id?`<div class="actions"><button class="btn small viewHirerBtn" onclick="viewHirer(${r.client_user_id})">View hirer profile</button></div>`:''}</div>`).join('')}
 async function saveCreatorProfile(e){e.preventDefault();try{await api('/api/creator-profile',{method:'PUT',body:JSON.stringify({category:$('pCategory').value,experience_years:$('pExp').value,qualifications:$('pQual').value,skills:$('pSkills').value,bio:$('pBio').value,work_mode:$('pMode').value,expected_salary:$('pSalary').value,hourly_rate:$('pRate').value,portfolio_url:$('pPortfolio').value,instagram:$('pInstagram').value,linkedin:$('pLinkedin').value,behance:$('pBehance').value,website:$('pWebsite').value,sample_works:$('pWorks').value})});toast('Your creator profile has been saved.');await renderCreatorDash();}catch(e){toast(e.message,true)}}
 async function viewHirer(id){try{const d=await api('/api/hirers/'+id);const c=d.client;$('hirerContent').innerHTML=`<div class="profileHero"><div class="profileAvatar">${initials(c.name)}</div><div><h2>${esc(c.name)}</h2><p>${esc(c.company||'Client')}</p></div></div><div class="detailGrid"><div class="detail"><b>Email</b>${esc(c.email)}</div><div class="detail"><b>Company</b>${esc(c.company||'Not specified')}</div><div class="detail" style="grid-column:1/-1"><b>About</b>${esc(c.bio||'No information added yet.')}</div></div><h3 style="margin:22px 0 5px">Social / Contact</h3><div class="socials">${c.social_url?`<a href="${esc(c.social_url)}" target="_blank" rel="noopener">Connect with ${esc(c.name.split(' ')[0])}</a>`:'<span style="color:#858793">No social link added.</span>'}</div><div style="margin-top:18px"><button class="btn ghost" onclick="reportSkillSpaceUser(${c.id})">Report Profile</button></div>`;openModal('hirerModal')}catch(e){toast(e.message,true)}}
 async function renderClientDash(){try{const [n,p,projects,meetings]=await Promise.all([api('/api/notifications'),api('/api/client-profile'),api('/api/assurance/projects'),api('/api/meetings')]);const c=p.client||{};const complete=Boolean(Number(c.profile_saved));const active=(projects.projects||[]).filter(x=>!['completed','cancelled'].includes(String(x.status).toLowerCase())).length;const pending=(projects.projects||[]).filter(x=>x.status==='awaiting_creator_agreement').length;const upcoming=(meetings.meetings||[]).filter(x=>['pending','confirmed'].includes(x.status)).length;
 const profileDetails=`<div class="detailGrid"><div class="detail"><b>Company / brand</b>${esc(c.company||'Not added')}</div><div class="detail"><b>Social / contact</b>${c.social_url?`<a href="${esc(c.social_url)}" target="_blank" rel="noopener">Open link</a>`:'Not added'}</div><div class="detail" style="grid-column:1/-1"><b>About you / project</b>${esc(c.bio||'No information added yet.')}</div></div><div class="saveRow"><button class="btn ghost" onclick="editClientProfile()">Edit Profile</button></div>${deleteAccountPanel()}`;
-$('dashboardContent').innerHTML=`<div class="dashStats"><div class="dashStat"><span>Active projects</span><b>${active}</b></div><div class="dashStat"><span>Awaiting agreement</span><b>${pending}</b></div><div class="dashStat"><span>Meetings & requests</span><b>${upcoming}</b></div><div class="dashStat"><span>Creators available</span><b>Discover</b></div></div><div class="dashGrid"><div class="panel"><h3>Project workspace</h3><p>Manage your briefs, creator conversations and project progress.</p><div class="quickActions"><button class="btn green" onclick="showAssuranceWorkspace()">My Projects & Blueprints</button><button class="btn ghost" onclick="showMyMeetings()">My Meetings</button><button class="btn ghost" onclick="showChat('dms')">Open DMs</button><button class="btn ghost" onclick="goHome();document.getElementById('creators').scrollIntoView({behavior:'smooth'})">Find Talent</button></div><h3 style="margin-top:24px">Recent activity</h3><div>${clientNotifications(n.notifications||[])}</div></div><div class="panel"><h3>My Client Profile</h3><p>${complete?'Your saved profile details.':'Add a few details so creators know who they are working with.'}</p><div id="clientProfileArea">${complete?profileDetails:clientProfileEditor(c)}</div></div></div>`;if(!complete)$('clientForm').onsubmit=saveClientProfile;
+$('dashboardContent').innerHTML=`<div class="dashStats"><div class="dashStat"><span>Active projects</span><b>${active}</b></div><div class="dashStat"><span>Awaiting agreement</span><b>${pending}</b></div><div class="dashStat"><span>Meetings & requests</span><b>${upcoming}</b></div><div class="dashStat"><span>Creators available</span><b>Discover</b></div></div><div class="dashGrid"><div class="panel"><h3>Project workspace</h3><p>Manage your briefs, creator conversations and project progress.</p><div class="quickActions"><button class="btn green" onclick="showAssuranceWorkspace()">My Projects & Blueprints</button><button class="btn ghost" onclick="showMyMeetings()">My Meetings</button><button class="btn ghost" onclick="showChat('dms')">Open DMs</button><button class="btn ghost" onclick="goHome();document.getElementById('creators').scrollIntoView({behavior:'smooth'})">Find Talent</button></div><h3 style="margin-top:24px">Recent activity</h3><div class="recentActivity">${clientNotifications(n.notifications||[])}</div></div><div class="panel"><h3>My Client Profile</h3><p>${complete?'Your saved profile details.':'Add a few details so creators know who they are working with.'}</p><div id="clientProfileArea">${complete?profileDetails:clientProfileEditor(c)}</div></div></div>`;if(!complete)$('clientForm').onsubmit=saveClientProfile;
 }catch(e){toast(e.message,true)}}
 function clientProfileEditor(c={}){return `<form id="clientForm"><div class="field"><label>Company / brand</label><input id="cCompany" value="${esc(c.company||'')}"></div><div class="field" style="margin-top:10px"><label>About you / project</label><textarea id="cBio">${esc(c.bio||'')}</textarea></div><div class="field" style="margin-top:10px"><label>Social / contact profile</label><input id="cSocial" value="${esc(c.social_url||'')}"></div><div class="saveRow"><button class="btn green" type="submit">Save Profile</button></div></form>${deleteAccountPanel()}`}
 function editClientProfile(){api('/api/client-profile').then(p=>{$('clientProfileArea').innerHTML=clientProfileEditor(p.client||{});$('clientForm').onsubmit=saveClientProfile}).catch(e=>toast(e.message,true))}
-function clientNotifications(rows){if(!rows.length)return '<div class="empty">No hiring activity yet.</div>';return rows.map(r=>`<div class="note"><strong>${esc(r.message)}</strong><small>${new Date(r.created_at+'Z').toLocaleString()}</small></div>`).join('')}
+function clientNotifications(rows){const latest=latestThreeActivity(rows);if(!latest.length)return '<div class="empty">No hiring activity yet.</div>';return latest.map(r=>`<div class="note"><strong>${esc(r.message)}</strong><small>${activityDate(r.created_at).toLocaleString()}</small></div>`).join('')}
 async function loadDashCreators(){try{const d=await api(`/api/creators?category=${encodeURIComponent($('dashCategory').value)}&search=${encodeURIComponent($('dashSearch').value)}`);$('dashCreators').innerHTML=d.creators.length?d.creators.map(c=>creatorCard(c)).join(''):'<div class="empty" style="grid-column:1/-1">No creators found.</div>'}catch(e){toast(e.message,true)}}
 async function saveClientProfile(e){e.preventDefault();try{await api('/api/client-profile',{method:'PUT',body:JSON.stringify({company:$('cCompany').value,bio:$('cBio').value,social_url:$('cSocial').value})});toast('Your client profile has been saved.');await renderClientDash();}catch(e){toast(e.message,true)}}
 async function showTestimonials(){closeSideMenu();$('homeView').style.display='none';['dashboardView','communityView','meetingsView','assuranceView','chatView'].forEach(id=>$(id)?.classList.remove('show'));$('testimonialsView').classList.add('show');try{const d=await api('/api/testimonials');const rows=d.testimonials||[];$('allTestimonials').innerHTML=rows.length?rows.map(testimonialCard).join(''):'<div class="empty">No member testimonials yet. Be the first to share yours.</div>'}catch(e){toast(e.message,true)}}
@@ -1445,5 +1587,93 @@ window.addEventListener('load',startRealtime);
  document.addEventListener('visibilitychange',()=>{if(document.hidden)cursor.style.opacity='0';});
 })();
 </script>
+
+
+<style id="skillspace-player2-heading-and-pixel-fire">
+@font-face{font-family:"Player 2";src:url("fonts/Player2FreeRegular-yY6q2.otf") format("opentype");font-style:normal;font-weight:400;font-display:swap;}
+/* Supplied font on headings only; preserve the site's existing text colours and gradients. */
+h1,h2,h3,h4,h5,h6,.brand,.adminBrand,.sideMenuHead,.sectionHead h2,.dashTop h1,.adminTop h1,.adminSectionHead h2,.modalbox h2,.faqIntro h2,.cta h2,.developerIntro h2,.leaderboardCategoryHead h3,.panel h3,.viewpage h1,.viewpage h2,.viewpage h3,#homeView .hero h1,#homeView .hero h1 .gradient{font-family:"Player 2",Inter,ui-sans-serif,system-ui,sans-serif!important;font-weight:400!important;letter-spacing:-.018em!important;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-text-stroke:0!important;paint-order:normal;text-shadow:none!important;}
+h1 .gradient,h2 .gradient,h3 .gradient,.hero h1 .gradient,.gradient,.brand>span{-webkit-text-stroke:0!important;text-shadow:none!important;}
+/* Short, pixel-stepped fire burst from the dragon toward the hovered label. */
+.sideLinks a::before{left:auto!important;right:49px!important;width:21px!important;height:9px!important;margin-top:-4px!important;opacity:0!important;transform:scaleX(.45)!important;transform-origin:right center!important;background:linear-gradient(#fff0a8 0 0) 0 3px/5px 3px no-repeat,linear-gradient(#ffd15d 0 0) 5px 1px/6px 7px no-repeat,linear-gradient(#ff8b27 0 0) 11px 3px/7px 3px no-repeat,linear-gradient(#ff5b1f 0 0) 17px 4px/4px 2px no-repeat!important;filter:drop-shadow(0 0 1px rgba(255,111,25,.7))!important;image-rendering:pixelated;}
+.sideLinks a:hover::before{opacity:1!important;animation:ssShortPixelBreath .16s steps(2,end) infinite alternate!important;}
+.sideLinks a::after{image-rendering:pixelated!important;width:36px!important;height:30px!important;right:8px!important;}
+@keyframes ssShortPixelBreath{from{transform:scaleX(.72) translateX(1px);filter:brightness(.95) drop-shadow(0 0 1px rgba(255,111,25,.6))}to{transform:scaleX(1) translateX(0);filter:brightness(1.12) drop-shadow(0 0 3px rgba(255,111,25,.9))}}
+@media(prefers-reduced-motion:reduce){.sideLinks a:hover::before,.sideLinks a:hover::after{animation:none!important}}
+</style>
+
+
+<style id="skillspace-player2-heading-proportion-refinement">
+/* Slightly larger and broader heading presence, with compact tracking like the reference.
+   zoom participates in layout, so headings do not spill over neighbouring content. */
+h1,h2,h3,h4,h5,h6,
+.brand,.adminBrand,.sideMenuHead,
+.sectionHead h2,.dashTop h1,.adminTop h1,.adminSectionHead h2,
+.modalbox h2,.faqIntro h2,.cta h2,.developerIntro h2,
+.leaderboardCategoryHead h3,.panel h3,.viewpage h1,.viewpage h2,.viewpage h3{
+  zoom:1.035;
+  letter-spacing:-.035em!important;
+}
+/* The homepage hero phrase gets a touch more size while retaining its existing line breaks,
+   colour gradients, and bold visual treatment. */
+#homeView .hero h1,.hero h1{
+  zoom:1.04;
+  letter-spacing:-.042em!important;
+  line-height:.94!important;
+}
+/* Avoid excessive enlargement on narrow screens. */
+@media(max-width:700px){
+  h1,h2,h3,h4,h5,h6,
+  .brand,.adminBrand,.sideMenuHead,
+  .sectionHead h2,.dashTop h1,.adminTop h1,.adminSectionHead h2,
+  .modalbox h2,.faqIntro h2,.cta h2,.developerIntro h2,
+  .leaderboardCategoryHead h3,.panel h3,.viewpage h1,.viewpage h2,.viewpage h3{
+    zoom:1.015;
+    letter-spacing:-.032em!important;
+  }
+  #homeView .hero h1,.hero h1{zoom:1.02;letter-spacing:-.04em!important}
+}
+</style>
+
+
+
+
+
+
+
+
+<style id="skillspace-hide-admin-analysis-menu-item">
+/* Admin Analytics must never appear as an item in the burger navigation. */
+#sideAdmin{display:none!important;visibility:hidden!important;pointer-events:none!important}
+</style>
+
+
+<style id="skillspace-dragon-mouth-pixel-fire-final">
+/* Longer pixel flame, anchored at the dragon's left-facing snout; clear of label text. */
+.sideLinks a{position:relative!important;isolation:isolate!important;overflow:visible!important;padding-right:58px!important}
+.sideLinks a::before{
+ content:""!important;display:block!important;position:absolute!important;top:50%!important;right:43px!important;left:auto!important;
+ width:112px!important;height:20px!important;margin-top:-10px!important;z-index:6!important;opacity:0!important;pointer-events:none!important;
+ transform:scaleX(.12)!important;transform-origin:right center!important;image-rendering:pixelated!important;
+ background:
+  linear-gradient(#fff8c7 0 0) right 0 top 7px/8px 6px no-repeat,
+  linear-gradient(#ffe36b 0 0) right 8px top 4px/12px 12px no-repeat,
+  linear-gradient(#ffb23c 0 0) right 20px top 2px/15px 15px no-repeat,
+  linear-gradient(#ff842b 0 0) right 35px top 5px/16px 10px no-repeat,
+  linear-gradient(#ff6125 0 0) right 51px top 7px/15px 6px no-repeat,
+  linear-gradient(#ff9a32 0 0) right 66px top 4px/10px 4px no-repeat,
+  linear-gradient(#ffd15c 0 0) right 74px top 11px/9px 3px no-repeat,
+  linear-gradient(#ff8b29 0 0) right 83px top 5px/11px 5px no-repeat,
+  linear-gradient(#ffbd43 0 0) right 94px top 2px/10px 4px no-repeat,
+  linear-gradient(#ff6b24 0 0) right 103px top 8px/8px 3px no-repeat!important;
+ filter:drop-shadow(0 0 3px rgba(255,112,24,.95));
+}
+.sideLinks a:hover::before,.sideLinks a:focus-visible::before{opacity:1!important;animation:ssDragonMouthBlast .34s steps(6,end) infinite alternate!important}
+.sideLinks a::after{content:""!important;position:absolute!important;display:block!important;right:8px!important;top:50%!important;width:36px!important;height:30px!important;margin-top:-15px!important;background:url('pixel-dragon.svg') center/contain no-repeat!important;image-rendering:pixelated!important;opacity:0!important;z-index:7!important;pointer-events:none!important;filter:drop-shadow(0 2px 0 rgba(0,0,0,.35))}
+.sideLinks a:hover::after,.sideLinks a:focus-visible::after{opacity:1!important;animation:ssDragonNod .22s steps(2,end) infinite alternate!important}
+@keyframes ssDragonMouthBlast{from{transform:scaleX(.78) translateX(1px);filter:brightness(.96) drop-shadow(0 0 2px rgba(255,111,24,.8))}to{transform:scaleX(1) translateX(0);filter:brightness(1.18) drop-shadow(0 0 5px rgba(255,111,24,1))}}
+@keyframes ssDragonNod{from{transform:translateY(-1px)}to{transform:translateY(1px)}}
+@media(prefers-reduced-motion:reduce){.sideLinks a:hover::before,.sideLinks a:focus-visible::before{animation:none!important;opacity:1!important;transform:scaleX(1)!important}.sideLinks a:hover::after,.sideLinks a:focus-visible::after{animation:none!important;opacity:1!important}}
+</style>
 
 </body></html>

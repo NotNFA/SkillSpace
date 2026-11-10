@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 32" shape-rendering="crispEdges">
+<g>
+<!-- tail --> <path fill="#4f9b50" d="M29 18h5v3h-4v3h-5v-3h4z"/>
+<!-- rear wing --> <path fill="#77c85b" d="M22 8h5V4h5v4h4v5h-5v3h-5v-3h-4z"/>
+<!-- body --> <path fill="#55ad4f" d="M12 13h17v9H12z"/>
+<!-- belly --> <path fill="#f3c66b" d="M15 19h12v3H15z"/>
+<!-- neck and head facing left --> <path fill="#66bd55" d="M8 10h10v8H8zM4 8h10v8H4z"/>
+<!-- snout --> <path fill="#78ce61" d="M1 11h7v5H1z"/>
+<!-- horn --> <path fill="#e7e0b7" d="M7 5h3v4H7zM12 6h3v3h-3z"/>
+<!-- eye --> <path fill="#211b18" d="M5 10h2v2H5z"/>
+<!-- legs --> <path fill="#438e45" d="M14 21h4v6h-3v2h-4v-3h3zM24 21h4v6h-3v2h-4v-3h3z"/>
+<!-- wing highlight --> <path fill="#a1df70" d="M23 8h4V6h3v4h-4v3h-3z"/>
+</g></svg>
